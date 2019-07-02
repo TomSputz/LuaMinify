@@ -176,6 +176,7 @@ local Scope = {
 		local chars = validNameChars or "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuioplkjhgfdsazxcvbnm_"
 		local chars2 = validNameChars or "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuioplkjhgfdsazxcvbnm_1234567890"
 		for _, var in pairs(self.Locals) do
+			if var.Name == "_ENV" then break end
 			local id = ""
 			local tries = 0
 			repeat
